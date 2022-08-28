@@ -62,8 +62,9 @@ class BouncingBall < Entity
   end
 end
 
-# Now we can define our Gosu window as normal...
-class Game < Gosu::Window
+# Now we can define our window - `OrangeZest::Window` is a subclass of `Gosu::Window` which makes
+# our life easier.
+class Game < OrangeZest::Window
   def initialize
     super WIDTH, HEIGHT
 
@@ -74,12 +75,11 @@ class Game < Gosu::Window
     BouncingBall.new(position: Point.new(50, 50)).register
   end
 
-  # Because we added our components to the main group, all we need to do here is update/draw that
-  # one group, found at `Group::Main`.
+  # There's nothing else to do!
+  # We added our components to the main group, and one of the key things that `OrangeZest::Window` 
+  # does is to update and draw this group for us.
   # The main group always exists and is the default for `#register`, but you can create more groups
   # and manage them manually if you need to. `#register` can take a different group as an argument.
-  def update; Group::Main.update; end
-  def draw; Group::Main.draw; end
 end
 
 # Let's go!

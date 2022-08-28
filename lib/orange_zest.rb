@@ -10,3 +10,6 @@ require_relative "orange_zest/group"
 require_relative "orange_zest/box"
 require_relative "orange_zest/point"
 require_relative "orange_zest/entity"
+
+require_relative "orange_zest/input"
+require_relative "orange_zest/window"
