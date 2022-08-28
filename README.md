@@ -1,38 +1,40 @@
 # OrangeZest
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/orange_zest`. To experiment with that code, run `bin/console` for an interactive prompt.
+OrangeZest is a **lightweight layer on top of the excellent
+[Gosu game library](https://www.libgosu.org/)**.
 
-TODO: Delete this and the text above, and describe your gem
+I absolutely love Gosu because it provides the perfect level of abstraction for you to approach a
+game's architecture however you like. This is the architecture that I've enjoyed using for the
+[last](https://github.com/AaronC81/pet-peeve)
+[three](https://github.com/AaronC81/the-arcane-king)
+[games](https://github.com/AaronC81/mini-mall-maker)
+I've created for the Gosu Game Jam, and I've finally decided to break it out into a separate gem to
+make it more reusable.
+
+OrangeZest encourages using OOP rather than ECS, although it's lightweight and unopinionated enough
+that you might be able to implement ECS on top of it. (The words "component" and "entity" in
+OrangeZest _do not_ refer to the ECS concepts - they just happen to fit OrangeZest's concepts too!)
+
+OrangeZest provides:
+
+- _Components_, objects which can be instantiated into the game world to provide behaviour
+- _Entities_, a subclass of components which has a position and animation
+- _Groups_, to bundle together related components into one
+- A very simple animation system
+- Simple mathematical primitives (points and boxes)
 
 ## Installation
 
-Add this line to your application's Gemfile:
+This gem is available on RubyGems as `orange_zest`. Add it to your Gemfile as `gem 'orange_zest'`,
+or install it globally with `gem install orange_zest`.
 
-```ruby
-gem 'orange_zest'
-```
+## Getting Started
 
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install orange_zest
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+See the `examples` directory for some sample scripts which use OrangeZest. 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/orange_zest. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/orange_zest/blob/main/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/AaronC81/orange_zest. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/AaronC81/orange_zest/blob/main/CODE_OF_CONDUCT.md).
 
 ## License
 
@@ -40,4 +42,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the OrangeZest project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/orange_zest/blob/main/CODE_OF_CONDUCT.md).
+Everyone interacting in the OrangeZest project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/AaronC81/orange_zest/blob/main/CODE_OF_CONDUCT.md).
