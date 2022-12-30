@@ -15,8 +15,9 @@ module OrangeZest
 
     def update
       super
-      Group::Main.update
       Input.update(self)
+      Scheduler.update
+      Group::Main.update
     end
 
     def draw
