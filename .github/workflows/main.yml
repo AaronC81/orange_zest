@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Install Gosu dependencies
+      run: sudo apt install build-essential libsdl2-dev libgl1-mesa-dev libopenal-dev libgmp-dev libfontconfig1-dev
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
