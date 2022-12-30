@@ -14,5 +14,6 @@ require_relative "orange_zest/scheduler"
 
 require_relative "orange_zest/input"
 require_relative "orange_zest/window"
+require_relative "orange_zest/trigger_condition"
 
 require_relative "orange_zest/ui"
