@@ -16,5 +16,11 @@ module OrangeZest
       && self.origin.y < other.origin.y + other.height \
       && other.origin.y < self.origin.y + self.height
     end
+
+    # Returns true if a point is inside this box.
+    def point_inside?(point)
+      point.x >= origin.x && point.x <= origin.x + width \
+      && point.y >= origin.y && point.y <= origin.y + height
+    end    
   end 
 end

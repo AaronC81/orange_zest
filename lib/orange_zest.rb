@@ -13,3 +13,5 @@ require_relative "orange_zest/entity"
 
 require_relative "orange_zest/input"
 require_relative "orange_zest/window"
+
+require_relative "orange_zest/ui"

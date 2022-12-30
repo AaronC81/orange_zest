@@ -80,5 +80,11 @@ module OrangeZest
         Gosu::Color.new(opacity * 255, 255, 255, 255),
       )
     end
+
+    # Returns a bounding box for this entity, starting at its position and spanning the size of its
+    # current frame.
+    def bounding_box
+      Box.new(position, image.width, image.height)
+    end
   end
 end
