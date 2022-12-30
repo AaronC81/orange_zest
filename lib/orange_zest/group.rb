@@ -27,6 +27,13 @@ module OrangeZest
     end
     alias << add
 
+    # Removes a component from this group.
+    # @param [Component] component
+    def remove(component)
+      @items.delete(component)
+    end
+    alias delete remove
+
     # @override
     def update
       return unless enabled?
