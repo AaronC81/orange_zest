@@ -4,7 +4,7 @@ OrangeZest is a **lightweight layer on top of the excellent
 [Gosu game library](https://www.libgosu.org/)**.
 
 I absolutely love Gosu because it provides the perfect level of abstraction for you to approach a
-game's architecture however you like. This is the architecture that I've enjoyed using for the
+game's architecture however you like. _This_ is the architecture that I've enjoyed using for the
 [last](https://github.com/AaronC81/pet-peeve)
 [three](https://github.com/AaronC81/the-arcane-king)
 [games](https://github.com/AaronC81/mini-mall-maker)
