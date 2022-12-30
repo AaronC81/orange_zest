@@ -34,13 +34,11 @@ module OrangeZest
     end
     alias delete remove
 
-    # @override
     def update
       return unless enabled?
       items.each(&:update)
     end
 
-    # @override
     def draw
       return unless enabled?
       items.each(&:draw)

@@ -63,12 +63,10 @@ module OrangeZest
       @current_animation.reset
     end
 
-    # @override
     def update
       @current_animation&.update
     end
 
-    # @override
     def draw
       return unless image
 

@@ -1,7 +1,7 @@
 module OrangeZest
   # A subclass of `Gosu::Window` which overrides a variety of default methods in order to:
-  #   - Draw and update the main group
-  #   - Update and provide inputs to `OrangeZest::Input`
+  # - Draw and update the main group
+  # - Update and provide inputs to {OrangeZest::Input}
   class Window < Gosu::Window
     def self.current
       @@current

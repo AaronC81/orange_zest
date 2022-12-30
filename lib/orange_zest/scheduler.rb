@@ -10,7 +10,7 @@ module OrangeZest
     WaitResult = Struct.new('WaitResult', :time)
 
     # Starts a new task, which executes the given block, and executes it until its first
-    # {Schedular.wait} call.
+    # {Scheduler.wait} call.
     #
     # If a task terminates without ever waiting, an exception is thrown, since this is likely a bug.
     def self.start(&block)
