@@ -2,6 +2,8 @@
 
 module OrangeZest; end
 
+require "gosu"
+
 require_relative "orange_zest/version"
 
 require_relative "orange_zest/component"

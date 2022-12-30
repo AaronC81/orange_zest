@@ -12,9 +12,26 @@ module OrangeZest
     def +(other)
       raise "can't add point to #{other}" unless other.is_a?(Point)
       Point.new(x + other.x, y + other.y, z + other.z)
-    end 
+    end
+    
+    def -@
+      Point.new(-x, -y, -z)
+    end
 
-    # TODO: more mathematical methods
+    def -(other)
+      self + -other
+    end
+
+    def ==(other)
+      other.is_a?(Point) &&
+        x == other.x &&
+        y == other.y &&
+        z == other.z
+    end
+
+    def hash
+      [x, y, z].hash
+    end
 
     # Computes the distance between this point and another.
     def distance(other)
