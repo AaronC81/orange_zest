@@ -82,7 +82,7 @@ module OrangeZest
     # Returns a bounding box for this entity, starting at its position and spanning the size of its
     # current frame.
     def bounding_box
-      Box.new(position, image.width, image.height)
+      Box.new(position, image.width * scaling, image.height * scaling)
     end
   end
 end
