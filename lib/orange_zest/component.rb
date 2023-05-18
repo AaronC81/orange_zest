@@ -28,5 +28,30 @@ module OrangeZest
       raise 'tried to unregister component which is not registered' unless group
       group.remove(self)
     end
+
+    # A helper method to easily instantiate a new `Component` without creating a named subclass.
+    # Useful for components which will be instantiated exactly once and never need to be referred
+    # to again.
+    #
+    # @param [#call, nil] update
+    # @param [#call, nil] draw
+    # @return [Component]
+    def self.anon(update: nil, draw: nil)
+      _update = update || ->{}
+      _draw = draw || ->{}
+
+      Class.new(Component) do
+        @@update = _update
+        @@draw = _draw
+
+        def update
+          @@update.()
+        end
+
+        def draw
+          @@draw.()
+        end
+      end.new
+    end  
   end
 end
