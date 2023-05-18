@@ -43,6 +43,11 @@ module OrangeZest
       [x, y, z].hash
     end
 
+    def to_s
+      "#<Point: #{x}, #{y}, #{z}>"
+    end
+    alias inspect to_s
+
     # Computes the distance between this point and another.
     def distance(other)
       x_dist = (x - other.x)
