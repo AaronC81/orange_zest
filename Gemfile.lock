@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    orange_zest (0.1.0)
+    orange_zest (0.2.0)
       gosu
 
 GEM
