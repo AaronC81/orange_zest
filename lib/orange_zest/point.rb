@@ -9,9 +9,19 @@ module OrangeZest
       @z = z
     end
 
+    def self.[](*args)
+      new(*args)
+    end
+
     def +(other)
-      raise "can't add point to #{other}" unless other.is_a?(Point)
-      Point.new(x + other.x, y + other.y, z + other.z)
+      case other
+      when Point
+        Point.new(x + other.x, y + other.y, z + other.z)
+      when Numeric
+        Point.new(x + other, y + other, z + other)
+      else
+        raise TypeError, "can't add point to #{other}"
+      end
     end
     
     def -@
