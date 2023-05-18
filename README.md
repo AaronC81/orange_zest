@@ -9,7 +9,8 @@ game's architecture however you like. _This_ is the architecture that I've enjoy
 [three](https://github.com/AaronC81/the-arcane-king)
 [games](https://github.com/AaronC81/mini-mall-maker)
 I've created for the Gosu Game Jam, and I've finally decided to break it out into a separate gem to
-make it more reusable.
+make it more reusable. [BREAKAWAY](https://github.com/AaronC81/breakaway) was the first game created
+using this gem after breaking it out, and it proved very useful!
 
 OrangeZest encourages using OOP rather than ECS, although it's lightweight and unopinionated enough
 that you might be able to implement ECS on top of it. (The words "component" and "entity" in
