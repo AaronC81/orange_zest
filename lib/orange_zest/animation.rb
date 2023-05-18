@@ -23,6 +23,19 @@ module OrangeZest
       new([image], -1)
     end
 
+    # A helper method to create a placeholder animation, with a single frame of static colour in a
+    # chosen size.
+    # @param [Numeric] width
+    # @param [Numeric] height
+    # @param [Gosu::Color] colour
+    # @return [Animation]
+    def self.placeholder(width, height, colour)
+      image = Gosu.render(width, height) do
+        Gosu.draw_rect(0, 0, width, height, colour)
+      end
+      Animation.static(image)
+    end  
+
     # Resets this animation to its first frame.
     def reset
       @ticks = 0
