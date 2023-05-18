@@ -56,12 +56,16 @@ module OrangeZest
     end
 
     # Return all points in a line from one point to another.
+    #
+    # This is a 2D operation - Z is ignored. Floating point components of either point are rounded
+    # to integers.
+    #
     # @param [Point] other
     # @return [<Point>]
     def line_to(other)
       # `supercover_line` from: https://www.redblobgames.com/grids/line-drawing.html
-      dx = other.x - self.x
-      dy = other.y - self.y
+      dx = other.x.round - self.x.round
+      dy = other.y.round - self.y.round
       nx = dx.abs
       ny = dy.abs
       sign_x = dx <=> 0
