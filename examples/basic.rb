@@ -1,3 +1,5 @@
+# A thoroughly-commented example of a simple bouncing ball around the screen.
+
 require 'gosu'
 require 'orange_zest'
 

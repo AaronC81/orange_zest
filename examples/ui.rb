@@ -1,3 +1,5 @@
+# Demonstrates some of OrangeZest's UI capabilities.
+
 require 'gosu'
 require 'orange_zest'
 
