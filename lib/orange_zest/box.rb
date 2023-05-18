@@ -18,9 +18,17 @@ module OrangeZest
     end
 
     # Returns true if a point is inside this box.
+    # @return [Boolean]
     def point_inside?(point)
       point.x >= origin.x && point.x <= origin.x + width \
       && point.y >= origin.y && point.y <= origin.y + height
-    end    
-  end 
+    end
+
+    # Returns the point at the centre of this box.
+    # @return [Point]
+    def centre
+      origin + Point.new(width / 2, height / 2)
+    end
+    alias center centre
+  end
 end
